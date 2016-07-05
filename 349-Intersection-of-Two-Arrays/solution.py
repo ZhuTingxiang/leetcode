@@ -4,8 +4,7 @@ class Solution(object):
         nums1 = list(set(nums1))
         nums2 = list(set(nums2))
         for i in nums1:
-            for n in nums2:
-                if i == n:
+            if i in nums2:
                     result.append(i)
         return result
         
