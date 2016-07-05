@@ -5,6 +5,7 @@ class Solution(object):
         for i in nums:
             if i not in pool:
                 if nums.count(i)>size/2:
+                    pool.append(i)
                     return i
 
         
