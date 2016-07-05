@@ -4,8 +4,8 @@ class Solution(object):
         pool =[]
         for i in nums:
             if i not in pool:
+                pool.append(i)
                 if nums.count(i)>size/2:
-                    pool.append(i)
                     return i
 
         
