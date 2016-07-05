@@ -2,10 +2,7 @@ class Solution(object):
     def containsDuplicate(self, nums):
         len1 = len(nums)
         len2 = len(list(set(nums)))
-        if (len1 == len2):
-            return False
-        else:
-            return True
+        return len1!=len2
 
         """
         :type nums: List[int]
