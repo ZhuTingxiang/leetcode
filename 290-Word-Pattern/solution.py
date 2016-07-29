@@ -7,6 +7,8 @@ class Solution(object):
                 str_split.append(i)
         if len(pattern) ==1:
             return True
+        # elif len(pattern) > len(str_split):
+        #     return False
         else:
             for n in range(0,len(pattern)-1):
                 for m in range(n+1,len(pattern)):
@@ -23,7 +25,6 @@ class Solution(object):
                                 print "he"
                                 return False
         return True
-
 
 
 
