@@ -5,13 +5,17 @@
 
 class Solution(object):
     def guessNumber(self, n):
-        print n
+        """
+        :type n: int
+        :rtype: int
+        """
+        if guess(n) == 0:
+            return n
         g=(1+n)/2
         result = guess(g)
         small_num = 1
         big_num = n
-        if guess(n) == 0:
-            return n
+        
         else:
             while result!=0:
                 if result == -1:
@@ -26,7 +30,4 @@ class Solution(object):
 
 
         
-        """
-        :type n: int
-        :rtype: int
-        """
+        
