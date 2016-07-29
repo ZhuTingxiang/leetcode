@@ -10,16 +10,15 @@ class Solution(object):
         else:
             for n in range(0,len(pattern)-1):
                 for m in range(n+1,len(pattern)):
-                    if pattern[n] == pattern[m]:
+                    if pattern[n] is None or pattern[m] is None:
+                        return False
+                    elif pattern[n] == pattern[m]:
                         if str_split[n] != str_split[m]:
                             return False
                     else:
                         if str_split[n] == str_split[m]:
                             return False
         return True
-
-
-
 
 
 
