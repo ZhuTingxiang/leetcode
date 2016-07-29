@@ -1,5 +1,6 @@
 class Solution(object):
     def wordPattern(self, pattern, str):
+        print pattern
         print str
         str_split = []
         for i in str.split():
