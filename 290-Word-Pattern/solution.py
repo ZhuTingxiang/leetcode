@@ -20,6 +20,7 @@ class Solution(object):
 
 
 
+
         """
         :type pattern: str
         :type str: str
