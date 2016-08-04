@@ -6,9 +6,7 @@ def isPrime(i):
         return True
     else:
         for j in range(2 ,i):
-
             if i% j == 0:
-                print "i%j",i%j
                 return False
         return True
 
@@ -25,8 +23,6 @@ class Solution(object):
             return 1
         else:
             for i in range(2,n):
-                print "i",i
                 if isPrime(i):
-                    print "isprime"
                     count += 1
         return count
