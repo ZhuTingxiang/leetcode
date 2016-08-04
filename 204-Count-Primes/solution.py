@@ -5,7 +5,7 @@ def isPrime(i):
     elif i == 2:
         return True
     else:
-        for j in range(2 ,i):
+        for j in range(2 ,i/2 +1):
             if i% j == 0:
                 return False
         return True
