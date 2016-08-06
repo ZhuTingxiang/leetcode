@@ -9,8 +9,7 @@ class Solution(object):
             result = ord(s[0]) % ord('A') + 1
         else:
             result = 0
-            result = ord(s[len(s)-1]) % ord('A')+1
-            for i in range(0,len(s)-1):
+            for i in range(0,len(s)):
                 result += 26**(len(s)-i-1)*(ord(s[i]) % ord('A')+1)
                 print "i,result",i,result 
         return result
