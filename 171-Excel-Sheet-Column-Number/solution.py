@@ -5,6 +5,6 @@ class Solution(object):
         :rtype: int
         """
         result = 0
-        for i in range(0,len(s)):
-            result += 26**(len(s)-i-1)*(ord(s[i]) % ord('A')+1)
+        for i,num in enumerate(reversed(s)):
+            result += pow(26,i)*(ord(num) % ord('A')+1)
         return result
