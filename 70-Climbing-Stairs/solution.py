@@ -13,8 +13,6 @@ class Solution(object):
         else:
             a, b, num = 1, 2, 3
             while num <= n:
-                temp = a
-                a = b
-                b = temp + b
+                temp, a, b = a, b, temp+b
                 num += 1
             return b
