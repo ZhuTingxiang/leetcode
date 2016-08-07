@@ -12,9 +12,10 @@ class Solution(object):
             return 2
         else:
             a, b = 1, 2
+            
             for i in range(2,n):
                 temp = a
                 a = b
                 b = temp + b
-                num += 1
+                i += 1
             return b
