@@ -11,8 +11,7 @@ class Solution(object):
         elif n == 2:
             return 2
         else:
-            a, b = 1, 2
-            num = 3
+            a, b, num = 1, 2, 3
             while num <= n:
                 temp = a
                 a = b
