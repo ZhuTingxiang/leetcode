@@ -11,8 +11,8 @@ class Solution(object):
         elif n == 2:
             return 2
         else:
-            a, b, num = 1, 2, 3
-            while num <= n:
+            a, b = 1, 2
+            for i in range(n-2)
                 temp = a
                 a = b
                 b = temp + b
