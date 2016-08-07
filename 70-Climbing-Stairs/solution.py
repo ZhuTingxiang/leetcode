@@ -11,5 +11,5 @@ class Solution(object):
         elif n == 2:
             return 2
         else:
-            return climbStairs(n-1)+climbStairs(n-2)
+            return self.climbStairs(n-1) + self.climbStairs(n-2)
         
