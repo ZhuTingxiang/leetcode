@@ -13,9 +13,3 @@ class Solution(object):
             return result
         else:
             return num
-        
-        
-        """
-        :type num: int
-        :rtype: int
-        """
