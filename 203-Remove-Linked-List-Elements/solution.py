@@ -12,16 +12,9 @@ class Solution(object):
         :rtype: ListNode
         """
         if head:
-            if head.next == None:
-                return head
-            else:
-                n = head
-                while n.next != None:
-                    if n.val == val:
-                        n.val = n.next.val
-                        n.next = n.next.next
-                    n = n.next
-                        
-                return head
+            if head.val == val:
+                head.val = head.next.val
+                head.next = head.next.next
+            head = head.next
         else:
-            return []
+            return head
