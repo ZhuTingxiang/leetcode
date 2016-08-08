@@ -12,7 +12,6 @@ class Solution(object):
         :rtype: ListNode
         """
         if head:
-            
             if head.next == None:
                 return head
             else:
@@ -22,6 +21,7 @@ class Solution(object):
                         n.val = n.next.val
                         n.next = n.next.next
                     n = n.next
+                        
                 return head
         else:
             return []
