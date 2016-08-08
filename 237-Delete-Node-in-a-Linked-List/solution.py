@@ -10,10 +10,11 @@ class Solution(object):
         :type node: ListNode
         :rtype: void Do not return anything, modify node in-place instead.
         """
-        if node:
-            while node.next !=3:
-                node = node.next
-            return node
-        else:
-            return None
+         while node.next is not None:
+                node.val = node.next.val
+                node.next = node.next.next
+           
+ 
+            
+            
             
