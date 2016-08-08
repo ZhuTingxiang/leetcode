@@ -17,4 +17,6 @@ class Solution(object):
                 if head.val == val:
                     head.val = head.next.val
                     head.next = head.next.next
-                    
+            return head
+        else:
+            return []
