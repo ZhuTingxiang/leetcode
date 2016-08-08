@@ -11,14 +11,14 @@ class Solution(object):
         :type val: int
         :rtype: ListNode
         """
-        old_head = pre = ListNode(0)
-        old_head.next = head
+        h = pre = ListNode(0)
+        h.next = head
         while head:
             if head.val == val:
                 pre.next = head.next
             else:
                 pre = pre.next
             head = head.next
-        return old_head.next
+        return h.next
                 
         
