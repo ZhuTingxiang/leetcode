@@ -8,6 +8,7 @@ class Solution(object):
         str = str(n)
         count = 0
         for i in str:
+            print i
             if i != 0:
                 count += 1
         return count
