@@ -4,8 +4,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        b = bin(n)
-        newString = str(b)
+        newString = str(bin(n))
         count = 0
         for i in newString:
             if i == '1':
