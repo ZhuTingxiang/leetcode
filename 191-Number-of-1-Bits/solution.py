@@ -4,11 +4,15 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        str = ''
-        str = str(n)
+        length = len(n)
+        string = str(n)
+        if len(string)!=len(n):
+            newString = 0*[len(n)-len(string)]+string
+        
+        if string 
         count = 0
-        for i in str:
+        for i in string:
             print i
-            if i != 0:
+            if i == 1:
                 count += 1
         return count
