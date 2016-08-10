@@ -4,6 +4,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        str = ''
         str = str(n)
         count = 0
         for i in str:
