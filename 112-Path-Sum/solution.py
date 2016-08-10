@@ -16,6 +16,7 @@ class Solution(object):
             return False
         if root.left or root.right:
             return self.hasPatchSum(root.left, sum-root.val) or self.hasPatchSum(root.right, sum-root.val)
-        return root,val == sum
+        else:
+            return root.val == sum
             
         
