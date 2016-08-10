@@ -5,6 +5,7 @@ class Solution(object):
         :rtype: int
         """
         length = len(n)
+        print n
         string = str(n)
         if len(string)!=len(n):
             newString = 0*[len(n)-len(string)]+string
