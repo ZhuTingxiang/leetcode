@@ -4,16 +4,10 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        length = len(n)
-        print n
-        string = str(n)
-        if len(string)!=len(n):
-            newString = 0*[len(n)-len(string)]+string
-        
-        if newString:
+        b = bin(n)
+        newString = str(b)
         count = 0
         for i in newString:
-            print i
-            if i == 1:
+            if i == '1':
                 count += 1
         return count
