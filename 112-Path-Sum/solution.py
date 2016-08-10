@@ -15,7 +15,7 @@ class Solution(object):
         if root:
             result = root.val
             while root.left is not None:
-                result += root.left
+                result += root.left.val
                 
             if result == sum:
                 return True
