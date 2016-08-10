@@ -12,15 +12,11 @@ class Solution(object):
         :type sum: int
         :rtype: bool
         """
-        if root:
-            result = root.val
-            while root.left is not None:
-                result += root.left.val
-                
-            if result == sum:
-                return True
-            else:
-                return False
+        if not root:
+            return False
+        if root.left or root.right:
+            return self.hasPatchSum(root.left, sum-root.left) or self.hasPatchSum(root.right, sum-root.right)
         else:
             return False
+            
         
