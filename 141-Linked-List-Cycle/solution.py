@@ -13,7 +13,8 @@ class Solution(object):
         slow = fast = head
         if head and head.next:
             fast = head.next
-            while fast.next.next is not None:
+            
+            while fast.next is not None and fast.next.next is not None:
                 if slow == fast:
                     return True
                 slow = slow.next
