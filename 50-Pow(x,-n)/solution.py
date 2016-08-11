@@ -10,8 +10,8 @@ class Solution(object):
         if n == 0:
             return 1
         if n%2 == 0:
-            res =self.myPow(x,int(n/2)) 
-            return res*res
+            res = self.myPow(x,int(n/2)) ** 2
+            return 
         else:
             return x * self.myPow(x,n-1)
                 
