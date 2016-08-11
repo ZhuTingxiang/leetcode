@@ -8,8 +8,7 @@ class Solution(object):
         if n < 0:
             return 1.0 /self.myPow(x,-n)
         if n%2 == 0:
-            res = self.myPow(x,n / 2)
-            return  res * res
+            return  self.myPow(x*x,n/2)
         else:
             return x * self.myPow(x,n-1)
                 
