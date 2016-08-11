@@ -5,8 +5,6 @@ class Solution(object):
         :type n: int
         :rtype: float
         """
-        if x == 0:
-            return 1
         if n < 0:
             return 1.0 /self.myPow(x,-n)
         if n%2 == 0:
