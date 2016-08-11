@@ -6,7 +6,7 @@ class Solution(object):
         """
         while n >1:
             if n %2 == 0:
-                return self.isPowerOfFour(n /2)
+                return self.isPowerOfTwo(n /2)
             else:
                 return False
         if n == 1:
