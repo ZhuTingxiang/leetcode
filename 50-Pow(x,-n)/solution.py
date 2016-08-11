@@ -6,8 +6,8 @@ class Solution(object):
         :rtype: float
         """
         if n < 0:
-            return 1.0 /self.myPow(x,-n)
-        if n%2 == 0:
+            return 1.0 // self.myPow(x,-n)
+        if int(n%2) == 0:
             return  (self.myPow(x,n//2)) ** 2
         else:
             return x * self.myPow(x,n-1)
