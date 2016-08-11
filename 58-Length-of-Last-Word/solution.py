@@ -4,7 +4,8 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        if not s or s == '' or s == "":
-            return 0
         l = s.split()
-        return len(l[len(l)-1])
+        if len(l) >= 1:
+            return len(l[len(l)-1])
+        else:
+            return 0
