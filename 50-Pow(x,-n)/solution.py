@@ -9,7 +9,8 @@ class Solution(object):
             return 1
         while n>1:
             if n%2 == 0:
-                return self.myPow(x,n/2) ** 2
+                res = self.myPow(x,n/2)
+                return  res*res
             else:
                 return x * self.myPow(x,n-1)
                 
