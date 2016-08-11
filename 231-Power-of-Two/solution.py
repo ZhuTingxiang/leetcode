@@ -4,17 +4,14 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        if n == 0:
-            return False
-        elif n == 1:
-            return True
-        while n/2 !=1:
-            if n%2 == 0:
-                n = n/2
+        while n >1:
+            if n %2 == 0:
+                return self.isPowerOfFour(n /2)
             else:
                 return False
-        if n/2 == 1 and n%2 == 0:
+        if n == 1:
             return True
-        else:
+        if n <= 0:
             return False
+       
         
