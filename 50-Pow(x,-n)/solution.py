@@ -12,7 +12,7 @@ class Solution(object):
         while n>1:
             if n%2 == 0:
                 res = self.myPow(x,n/2)
-                return  res*res
+                return  res * res
             else:
                 return x * self.myPow(x,n-1)
                 
