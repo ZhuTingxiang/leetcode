@@ -18,6 +18,6 @@ class Solution(object):
                     return True
                 slow = slow.next
                 fast = fast.next
-            return False
+        return False
         
         
