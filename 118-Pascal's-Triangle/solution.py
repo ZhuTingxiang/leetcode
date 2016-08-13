@@ -19,7 +19,6 @@ class Solution(object):
         result = self.generate(numRows-1)
         priorLine = result[len(result)-1]
         for index,char in enumerate(priorLine):
-            print char
             if index < len(priorLine)-1:
                 sum = int(char) +  int(priorLine[index+1])
                 lastLine.append(sum)
