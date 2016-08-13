@@ -14,7 +14,6 @@ class Solution(object):
             for i in range(0,len(last)-1):
                 line.append(last[i]+last[i+1])
             line.append(1)
-            print line
             return line
                 
             
