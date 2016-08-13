@@ -8,6 +8,8 @@ class Solution(object):
         len_n = len(needle)
         if len_n == 0:
             return 0
+        if haystack == "":
+            return -1
         else:
             for index_n,char_n in needle:
                 for index_h,char_h in haystack:
