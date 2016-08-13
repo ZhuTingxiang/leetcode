@@ -16,6 +16,7 @@ class Solution(object):
                     if char_n == char_h:
                         print index_h
                         print index_h + len_n + 1
+                        print haystack[index_h + len_n + 1]
                         if haystack[index_h,index_h + len_n + 1] == needle:
                             return char_h
         return -1
