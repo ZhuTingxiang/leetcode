@@ -18,6 +18,7 @@ class Solution(object):
         lastLine.append(1)
         result.append(self.generate(numRows-1))
         for j in result[len(result)-2]:
+            print j
             sum = []
             sum.append(j)
             sum.append(j+1)
