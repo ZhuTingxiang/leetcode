@@ -16,17 +16,15 @@ class Solution(object):
             return result
         lastLine = []
         lastLine.append(1)
-        result.append(self.generate(numRows-1))
+        result = self.generate(numRows-1)
         priorLine = result[len(result)-1]
         for index,char in enumerate(priorLine):
+            print char
             if index < len(priorLine)-1:
-                sum = []
-                sum.append(char)
-                sum.append(priorLine[index+1])
-                print "sum",sum
+                sum = int(char) +  int(priorLine[index+1])
                 lastLine.append(sum)
-        lastline.append(1)
-        result.append(lastline)
+        lastLine.append(1)
+        result.append(lastLine)
         return result
                 
                 
