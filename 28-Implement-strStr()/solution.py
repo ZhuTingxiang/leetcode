@@ -14,6 +14,8 @@ class Solution(object):
             for index_n,char_n in enumerate(needle):
                 for index_h,char_h in enumerate(haystack):
                     if char_n == char_h:
+                        print index_h
+                        print index_h + len_n + 1
                         if haystack[index_h,index_h + len_n + 1] == needle:
                             return char_h
         return -1
