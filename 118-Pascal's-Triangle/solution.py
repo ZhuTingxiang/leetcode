@@ -17,12 +17,13 @@ class Solution(object):
         lastLine = []
         lastLine.append(1)
         result.append(self.generate(numRows-1))
-        for j in result[len(result)-2]:
-            print j
-            sum = []
-            sum.append(j)
-            sum.append(j+1)
-            lastLine.append(sum)
+        priorLine = result[len(result)-1]
+        for index,char in enumerate(priorLine):
+            while index < len(priorLine)-1:
+                sum = []
+                sum.append(char)
+                sum.append(priorLine[index+1])
+                lastLine.append(sum)
         lastline.append(1)
         result.append(lastline)
         return result
