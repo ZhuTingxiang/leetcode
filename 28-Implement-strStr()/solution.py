@@ -5,4 +5,15 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
-        return haystack.find(needle)
+        len_n = len(needle)
+        if len_n == 0:
+            return 0
+        else:
+            for index_n,char_n in needle:
+                for index_h,char_h in haystack:
+                    if char_n == char_h:
+                        if haystack[char_h,char_h + len_n + 1] == needle:
+                            return char_h
+        return -1
+                        
+                        
