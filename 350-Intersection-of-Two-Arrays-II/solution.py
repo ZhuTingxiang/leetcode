@@ -13,7 +13,9 @@ class Solution(object):
             if j in dict:
                 if dict[j] >=1:
                     result.append(j)
+                    dict[i] -= 1
         return result
+        
             
                     
                     
