@@ -15,6 +15,7 @@ class Solution(object):
         height1 = D-B
         width2 = G-E
         height2 = H-F
+        total = width1*height1+width2*height2
         if D>=H and H>=B and B>=F:
             height = H-B
         elif D>=H and H>=F and F>=B:
@@ -37,7 +38,7 @@ class Solution(object):
             width = G-E
         else:
             width = 0
-        total = width1*height1+width2*height2
+        
         return total - height * width
         
         
