@@ -6,21 +6,20 @@ class Solution(object):
         :rtype: str
         """
         a,b = 0,0
-        same,almost1,almost2 = [],[],[]
-        for index1,char1 in enumerate(secret):
-            for index2,char2 in enumerate(guess):
-                if char1 == char2:
-                    if index1 == index2:
-                        same.append(index2)
-                        a += 1
-        for index1,char1 in enumerate(guess):
-            for index2,char2 in enumerate(secret):
-                if char1 == char2:
-                    if index2 not in same and index1 not in same:
-                        if index1 not in almost1 and index2 not in almost2:
-                            almost1.append(index1)
-                            almost2.append(index2)
-                            b += 1
+        same,s,g= [],[],[]
+        for index,char in enumerate(guess):
+            if secret[index] == guess[index]:
+                a += 1
+            else:
+                s.append(secret[index])
+                g.append(guess[index])
+                        
+        for i,c in enumerate(g):
+            if g[i] in s:
+                s.remove(g[i])
+                b += 1
+                
+            
                             
         strr= ""
         strr = str(a)+"A"+str(b)+"B"
