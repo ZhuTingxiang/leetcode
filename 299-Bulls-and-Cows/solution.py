@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: str
         """
         a,b = 0,0
-        same,almost = [],[]
+        same,almost1,almost2 = [],[],[]
         for index1,char1 in enumerate(secret):
             for index2,char2 in enumerate(guess):
                 if char1 == char2:
