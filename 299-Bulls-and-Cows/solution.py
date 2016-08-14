@@ -13,7 +13,6 @@ class Solution(object):
                     if index1 == index2:
                         same.append(index2)
                         a += 1
-        print same
         for index1,char1 in enumerate(guess):
             for index2,char2 in enumerate(secret):
                 if char1 == char2:
