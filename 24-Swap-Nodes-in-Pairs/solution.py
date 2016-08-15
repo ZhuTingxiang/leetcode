@@ -13,7 +13,7 @@ class Solution(object):
         if head:
             cur = temp = head
             n = head.next
-            while cur.next:
+            while cur.next is not None:
                 cur.next = cur.next.next
                 n.next = cur
                 cur = cur.next
