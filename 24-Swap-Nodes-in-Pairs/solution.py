@@ -13,13 +13,15 @@ class Solution(object):
         if head:
             cur = temp = head
             n = head.next
-            while cur.next.next is not None:
-                cur.next = cur.next.next
-                n.next = cur
-                cur = cur.next
-                n = cur.next
-            return temp.next
-        return 
+            while cur.next is not None:
+                if cur.next.next is not None:
+                    cur.next = cur.next.next
+                    n.next = cur
+                    cur = cur.next
+                    n = cur.next
+                else:
+                    return temp.next
+        return temp
                 
                 
             
