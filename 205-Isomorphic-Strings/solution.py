@@ -5,12 +5,12 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        dict1,dict2 = {},{}
+        dict={}
         for index,char in enumerate(s):
-            if char not in dict1 and t[index] not in dict1.values():
+            if char not in dict1 and t[index] not in dict.values():
                 dict1[char] = t[index]
             else:
-                if dict1.get(char) != t[index]:
+                if dict.get(char) != t[index]:
                     return False
         return True
         
