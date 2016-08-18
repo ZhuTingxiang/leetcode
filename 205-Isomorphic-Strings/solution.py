@@ -7,19 +7,11 @@ class Solution(object):
         """
         dict1,dict2 = {},{}
         for index,char in enumerate(s):
-            if char in dict1:
-                if dict1[char] != t[index]:
-                    print "1"
-                    return False
-            else:
+            if char not in dict1 and t[index] not in dict1.values():
                 dict1[char] = t[index]
-        for index,char in enumerate(t):
-            if char in dict2:
-                if dict2[char] != s[index]:
-                    print "2"
-                    return False
             else:
-                dict2[char] = s[index]
+                if dict1.get(char) != t[index]:
+                    return False
         return True
         
             
