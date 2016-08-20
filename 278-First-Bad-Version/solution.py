@@ -10,9 +10,18 @@ class Solution(object):
         :rtype: int
         """
         last = n
-        for index in range(1,n):
-            if isBadVersion(index-1) == False and isBadVersion(index) == True:
-                return index
+        first = 0
+        n = (first+last) //2
+        while last > first:
+            n = (last+first)/2
+            if isBadVersion(n):
+                last = n
+            else:
+                first = n+1
+        return first
+                
+            
+            
         
                 
         
