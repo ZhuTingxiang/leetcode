@@ -14,12 +14,11 @@ class Solution(object):
         res,nextline,line = [],[],[]
         if root is None:
             return []
-        line.append(root)
-        res.append(line)
+        line = [root]
+        res = [line]
         while line:
             nextline = []
             for i in line:
-                print "i",i
                 if i.left:
                     nextline.append(i.left)
                 if i.right:
