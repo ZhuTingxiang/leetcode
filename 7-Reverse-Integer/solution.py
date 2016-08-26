@@ -10,7 +10,5 @@ class Solution(object):
             result = int(s[::-1])
         else:
             result =int('-'+s[1:][::-1])
-        if result<2147483647 and result >-2147483647:
-            return result
-        return 0
+        return result if -2147483647 <= result <= 2147483647 else 0
             
