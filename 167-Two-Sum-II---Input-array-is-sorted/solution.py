@@ -7,10 +7,10 @@ class Solution(object):
         """
         res = []
         for index1,char1 in enumerate(numbers):
-            for index2,char2 in enumerate(numbers):
-                if char1+char2 == target and index1 != index2:
+            for index2,char2 in enumerate(numbers[::-1]):
+                if char1+char2 == target and index1 != len(numbers)-1-index2:
                     res.append(index1+1)
-                    res.append(index2+1)
+                    res.append(len(numbers)-index2)
                     return res
                     
             
