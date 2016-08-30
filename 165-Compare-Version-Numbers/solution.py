@@ -5,14 +5,24 @@ class Solution(object):
         :type version2: str
         :rtype: int
         """
-        if version1 == version2:
-            return 0
         version1 = version1.split('.')
         version2 = version2.split('.')
-        if version1[0] > version2[0]:
-            return 1
-        if version1[0] < version2[0]:
-            return -1
-        if version1[0] ==version2[0]:
-            return 1 if version1[1] > version2[1] else -1
+        for i in range(0,min(len(version1),len(version2))):
+            if int(version1[i]) > int(version2[i]):
+                return 1
+            if int(version1[i])<int(version2[i]):
+                return -1
+        if len(version1) > len(version2):
+            for i in version1[len(version2):]:
+                if int(i) != 0:
+                    return 1
+            return 0
+        if len(version1) < len(version2):
+            for i in version2[len(version1):]:
+                if int(i) != 0:
+                    return -1
+            return 0
+    
         return 0
+            
+       
