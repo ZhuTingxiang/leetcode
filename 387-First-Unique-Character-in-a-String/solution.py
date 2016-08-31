@@ -4,8 +4,6 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        if len(s) == 1:
-            return 0
         list = []
         for index,char in enumerate(s):
             if index < len(s)-1:
