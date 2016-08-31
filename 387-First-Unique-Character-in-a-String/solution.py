@@ -18,8 +18,6 @@ class Solution(object):
             if index == len(s)-1:
                 if char not in list:
                     return index
-                
-                
         return -1
         
      
