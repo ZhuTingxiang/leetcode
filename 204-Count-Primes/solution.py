@@ -1,34 +1,22 @@
-import math
-
-def isPrime(i):
-    if i < 2:
-        return False
-    elif i == 2:
-        return True
-    else:
-        sqrt = int(math.sqrt(i))
-
-        for j in range(2,sqrt+1):
-            if i% j == 0:
-                return False
-        return True
-
+from math import sqrt
 class Solution(object):
     def countPrimes(self, n):
         """
         :type n: int
         :rtype: int
         """
+        isPrime = [True for i in range(0,n)]
         count = 0
-        if n <= 2:
-            return 0
-        if n == 3:
-            return 1
-        else:
-            flag = True
-            for i in range(2,n):
-                print "i",i
-                if isPrime(i):
-                    print "isprime"
-                    count += 1
+        i = 2
+        for i in range(2,int(sqrt(n))+1):
+            if isPrime[i] == False:
+                continue
+            for j in range(i*i,n,i):
+                isPrime[j] = False
+        for i in range(2,n):
+            if isPrime[i] == True:
+                count += 1
         return count
+            
+            
+            
