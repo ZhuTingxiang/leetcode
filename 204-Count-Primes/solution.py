@@ -7,7 +7,6 @@ class Solution(object):
         """
         isPrime = [True for i in range(0,n)]
         count = 0
-        i = 2
         for i in range(2,int(sqrt(n))+1):
             if isPrime[i] == False:
                 continue
