@@ -11,7 +11,7 @@ class Solution(object):
             return nums[0]
         sum[0] = nums[0]
         sum[1] = max(nums[1],nums[0])
-        for i in range(2,n):
+        for i in range(2,len(nums)):
             sum[i] = max(sum[i-1],sum[i-2]+nums[i])
         return sum[n-1]
         
