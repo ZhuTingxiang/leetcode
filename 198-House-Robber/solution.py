@@ -13,7 +13,7 @@ class Solution(object):
         sum[1] = max(nums[1],nums[0])
         for i in range(2,len(nums)):
             sum[i] = max(sum[i-1],sum[i-2]+nums[i])
-        return sum[n-1]
+        return sum[len(nums)-1]
         
             
             
