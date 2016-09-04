@@ -20,7 +20,7 @@ class Solution(object):
         if root.left and root.right:
             if abs(self.findHeight(root.left) - self.findHeight(root.right)) > 1:
                 return False
-            if !self.isBalanced(root.left) or !self.isBalanced(root.right):
+            if !self.isBalanced(root.left) or (!self.isBalanced(root.right)):
                 return False
         return True
 
