@@ -13,7 +13,7 @@ class Solution(object):
         """
         if not root:
             return True
-        if root.right is not None and root.left is None:
+        if root.right and not root.left :
             return self.findHeight(root.right)<=1
         if not root.right and root.left:
             return self.findHeight(root.left)<=1
@@ -25,13 +25,13 @@ class Solution(object):
         return True
 
     def findHeight(self,root):
-        if root.left is None and root.right is not None:
+        if not root.left and root.right:
             height = self.findHeight(root.right) + 1
-        elif root.right is None and root.left is not None:
+        elif not root.right and root.left:
             height = self.findHeight(root.left) + 1
         elif root.left and root.right:
             height = max(self.findHeight(root.left),self.findHeight(root.right)) + 1
-        elif root.right is None and root.left is None:
+        elif not root.right and not root.left:
             height = 1
         return height
         
