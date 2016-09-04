@@ -15,7 +15,7 @@ class Solution(object):
             return True
         if root.right is not None and root.left is None:
             return self.findHeight(root.right)<=1
-        if root.right is None and root.left is not None:
+        if not root.right and root.left:
             return self.findHeight(root.left)<=1
         if root.left and root.right:
             if abs(self.findHeight(root.left) - self.findHeight(root.right)) > 1:
