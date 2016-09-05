@@ -11,7 +11,7 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        # recursive solution
+        ########################## recursive solution ######################
         
         # if not root:
         #     return 0
@@ -22,7 +22,7 @@ class Solution(object):
         # else:
         #     return min(self.minDepth(root.left),self.minDepth(root.right))+1
         
-        #iterative solution
+        ######################### iterative solution ######################
         if not root:
             return 0
         level = []
