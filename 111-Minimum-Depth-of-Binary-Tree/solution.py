@@ -26,7 +26,7 @@ class Solution(object):
         if not root:
             return 0
         level = []
-        depth = 
+        depth = 1
         if root.left is not None:
             level.append(root.left)
         if root.right is not None:
@@ -34,19 +34,17 @@ class Solution(object):
         while len(level) != 0:
             nextlevel = []
             depth += 1
-            print "depth",depth
             for i in level:
-                if i.right is not None:
-                    nextlevel.append(i.right)
-                elif i.left is not None:
-                    nextlevel.append(i.left)
-                elif i.right and i.left:
-                    nextlevel.append(i.right)
-                    nextlevel.append(i.left)
-                else:
+                if i.right is None and i.left is None:
                     return depth
+                if i.right is None:
+                    nextlevel.append(i.left)
+                elif i.left is None:
+                    nextlevel.append(i.right)
+                else:
+                    nextlevel.append(i.right)
+                    nextlevel.append(i.left)
             level = nextlevel
-            print level
         return depth
             
             
