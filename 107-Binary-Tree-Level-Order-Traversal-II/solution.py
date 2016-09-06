@@ -14,16 +14,16 @@ class Solution(object):
         if not root:
             return []
         level = []
+        result = []
         level.insert(0,root)
         while len(level) >= 1:
             tmp = [i.val for i in level]
             result.insert(0,tmp)
             nextlevel = []
             for i in level:
-                if i.right is not None:
-                    nextlevel.insert(0,i.right)
-                if i.left is not None:
-                    nextlevel.insert(0,i.left)
+                for j in (i.left,i.right):
+                    if j is not None:
+                        nextlevel.append(j)
             level = nextlevel
         return result
                 
