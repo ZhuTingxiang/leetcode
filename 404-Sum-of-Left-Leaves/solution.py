@@ -14,26 +14,14 @@ class Solution(object):
         sum = 0
         if not root:
             return 0
-        elif len(self.leftLeavesList(root)) != 0:
-            for i in self.leftLeavesList(root):
-                sum += i.val
-        return sum
-        
-            
-    def leftLeavesList(self,root):
-        list = []
-        if not root:
-            return list
         if root.left:
             if root.left.left is None and root.left.right is None:
-                list.append(root.left)
+                sum += root.left.val
             
-        if len(self.leftLeavesList(root.right)) !=0:
-            for i in self.leftLeavesList(root.right):
-                list.append(i)
-        if len(self.leftLeavesList(root.left)) !=0:
-            for i in self.leftLeavesList(root.left):
-                list.append(i)
-        return list
+        if self.sumOfLeftLeaves(root.right) !=0:
+                sum += self.sumOfLeftLeaves(root.right)
+        if self.sumOfLeftLeaves(root.left) !=0:
+                sum += self.sumOfLeftLeaves(root.left)
+        return sum
 
             
