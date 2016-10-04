@@ -15,12 +15,9 @@ class Solution(object):
             else:
                 dict[i] += 1
         max_even = 0
-        print dict
         for x in dict:
             if dict[x]/2>0:
                 length += dict[x]/2 *2
-        if length < len(str):
-            length += 1
-        return length
+        return length+1 if length < len(str) else length
             
             
