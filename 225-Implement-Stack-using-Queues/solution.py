@@ -4,7 +4,7 @@ class Stack(object):
         """
         initialize your data structure here.
         """
-        self.d = collections.deque()
+        self.d =deque()
         
 
     def push(self, x):
