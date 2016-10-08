@@ -1,10 +1,10 @@
-import collections
+from collections import deque
 class Stack(object):
     def __init__(self):
         """
         initialize your data structure here.
         """
-        self.d =deque()
+        self.d = deque()
         
 
     def push(self, x):
@@ -19,7 +19,7 @@ class Stack(object):
         """
         :rtype: nothing
         """
-        if self.d:
+        if not self.empty():
             self.d.pop()
         
 
@@ -27,7 +27,7 @@ class Stack(object):
         """
         :rtype: int
         """
-        if self.d:
+        if not self.empty():
             return self.d[-1]
         else:
             return None
@@ -37,5 +37,5 @@ class Stack(object):
         """
         :rtype: bool
         """
-        return self.d
+        return len(self.d) == 0
         
