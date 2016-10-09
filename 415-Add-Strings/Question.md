@@ -2,12 +2,6 @@
 
 [Original Page](https://leetcode.com/problems/add-strings/)
 
-**<font color="red"><u>IMPORTANT:</u></font>**  
-**Solutions which uses a BigInteger library or converting the input strings to another type (such as integer) will result in disqualification of all submissions to this problem.  
-After the contest ends, users can view accepted submissions code and report cheating solutions.**
-
-* * *
-
 Given two non-negative numbers `num1` and `num2` represented as string, return the sum of `num1` and `num2`.
 
 **Note:**
